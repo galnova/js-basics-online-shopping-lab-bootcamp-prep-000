@@ -29,14 +29,14 @@ function viewCart() {
   const itemsAndPrices = [];
   
   for (let i = 0; i < 1; i++) {
-    let itemsAndPrice = cart[i];
+    let itemAndPrice = cart[i];
     let item = Object.keys(itemAndPrice)[0];
     let price = itemAndPrice [item];
     
-    itemAndPrices.push(`${item} at \$${price}`);
+    itemsAndPrices.push(`${item} at \$${price}`);
   }
   
-  console.log(`In your cart, you have ${itemAndPrices.join(', ')}.`);
+  console.log(`In your cart, you have ${itemsAndPrices.join(', ')}.`);
 }
 
 function total() {
