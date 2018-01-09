@@ -55,15 +55,24 @@ var cart_list = new Array
 }
 
 function total() {
-  var t = 0;
   
-  for (let i = 0; i < cart.length; i++) {
-    let object = cart[i];
-    let key = Object.keys(object);
-    
-    t += object[key];
+  var total = null;
+  for (var item in getCart()) {
+    for (var name in getCart()[item]) {
+       total += getCart()[item][name];
+    }
   }
-  return t;
+  return total;
+  
+  // var t = 0;
+  
+  // for (let i = 0; i < cart.length; i++) {
+  //   let object = cart[i];
+  //   let key = Object.keys(object);
+    
+  //   t += object[key];
+  // }
+  // return t;
 }
 
 function removeFromCart(item) {
