@@ -20,6 +20,12 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  
+  var cart_list = new Array;
+  
+  for (let) {
+    
+  }
   // const l = cart.length;
   
   // if (!l) {
