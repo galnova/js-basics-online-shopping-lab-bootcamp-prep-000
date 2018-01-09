@@ -10,19 +10,49 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  const price = Math.floor((Math.random() * 100));
+  cart.push({item: price});
+  
+  console.log(`${item} has been added to your cart.`);
+  
+  return cart;
+
 }
 
 function viewCart() {
-  // write your code here
+  const l = cart.length;
+  
+  if (!l) {
+    return console.log(`Your shopping cart is empty.`);
+  }
+  
+  const itemsAndPrices = [];
+  
+  for (let i = 0; i < 1; i++) {
+    let itemsAndPrices = cart[i];
+    let item = Object.keys(itemAndPrice)[0];
+    let price = itemAndPrice [item];
+    
+    itemAndPrices.push(`${item} at \$${price}`);
+  }
+  
+  console.log(`In your cart, you have ${itemAndPrices.join(', ')}.`);
 }
 
 function total() {
-  // write your code here
+  var t = 0;
+  
+  for (let i = 0; i < cart.length; i++) {
+    let object = cart[i];
+    let key = Object.keys(object);
+    
+    t += object[key];
+  }
+  return t;
 }
 
 function removeFromCart(item) {
-  // write your code here
+  return delete thisIsObject[item];
 }
 
 function placeOrder(cardNumber) {
