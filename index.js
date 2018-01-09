@@ -76,7 +76,14 @@ function total() {
 }
 
 function removeFromCart(item) {
-  return delete thisIsObject[item];
+    for (var element in getCart()) {
+    if (getCart()[element].hasOwnProperty(item)) {
+      getCart().splice(element, 1);
+      break;
+    }
+  }
+  console.log("That item is not in your cart.");
+  // return delete thisIsObject[item];
 }
 
 function placeOrder(cardNumber) {
