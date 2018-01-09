@@ -29,7 +29,7 @@ function viewCart() {
   const itemsAndPrices = [];
   
   for (let i = 0; i < 1; i++) {
-    let itemsAndPrices = cart[i];
+    let itemsAndPrice = cart[i];
     let item = Object.keys(itemAndPrice)[0];
     let price = itemAndPrice [item];
     
