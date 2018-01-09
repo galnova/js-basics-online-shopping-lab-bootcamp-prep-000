@@ -20,23 +20,23 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  const l = cart.length;
+  // const l = cart.length;
   
-  if (!l) {
-    return console.log(`Your shopping cart is empty.`);
-  }
+  // if (!l) {
+  //   return console.log(`Your shopping cart is empty.`);
+  // }
   
-  const itemsAndPrices = [];
+  // const itemsAndPrices = [];
   
-  for (let i = 0; i < 1; i++) {
-    let itemAndPrice = cart[i];
-    let item = Object.keys(itemAndPrice)[0];
-    let price = itemAndPrice [item];
+  // for (let i = 0; i < 1; i++) {
+  //   let itemAndPrice = cart[i];
+  //   let item = Object.keys(itemAndPrice)[0];
+  //   let price = itemAndPrice [item];
     
-    itemsAndPrices.push(`${item} at \$${price}`);
-  }
+  //   itemsAndPrices.push(`${item} at \$${price}`);
+  // }
   
-  console.log(`In your cart, you have ${itemsAndPrices.join(', ')}.`);
+  // console.log(`In your cart, you have ${itemsAndPrices.join(', ')}.`);
 }
 
 function total() {
