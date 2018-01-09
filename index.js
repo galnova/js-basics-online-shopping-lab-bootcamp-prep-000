@@ -21,6 +21,11 @@ function addToCart(item) {
 
 function viewCart() {
   const l = cart.length;
+  
+  if (!l) {
+    return console.log(`Your shopping cart is empty.`);
+  }
+  
   const itemsAndPrices = [];
   
   for (let i = 0; i < 1; i++) {
@@ -29,10 +34,6 @@ function viewCart() {
     let price = itemAndPrice [item];
     
     itemsAndPrices.push(`${item} at \$${price}`);
-  }
-  
-  if (!l) {
-    return console.log(`Your shopping cart is empty.`);
   }
   
   console.log(`In your cart, you have ${itemsAndPrices.join(', ')}.`);
